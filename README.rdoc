@@ -1,9 +1,19 @@
 = mongoid_autofields
 
-Description goes here.
+add autofields extension to get up and running with mongoid even faster!
+
+example:
+
+  class Basic
+    include Mongoid::Document
+    include Mongoid::Autofields
+  end
+
+  b = Basic.create :name => 'very basic model', :description => 'fields are automatically detected'
+  p Basic.last
 
 == Note on Patches/Pull Requests
- 
+
 * Fork the project.
 * Make your feature addition or bug fix.
 * Add tests for it. This is important so I don't break it in a

@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
      "VERSION",
      "lib/mongoid/autofields.rb",
      "lib/mongoid_autofields.rb",
+     "mongoid_autofields.gemspec",
      "test/helper.rb",
      "test/test_mongoid_autofields.rb"
   ]

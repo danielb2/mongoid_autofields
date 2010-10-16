@@ -1,9 +1,31 @@
 = mongoid_autofields
 
-Miscommunication with mongoid authors makes this gem now obsolete.
+There's dynamic fields in Mongoid, and I wrote this gem originally as a result of a
+miscommunication with the mongoid team. However, I've had some issues with
+dynamic fields, and I've had better luck with this gem.
 
-See allow_dynamic_fields: true instead at
+add autofields extension to get up and running with mongoid even faster!
 
-http://mongoid.org/docs/installation/
+example:
 
-under configuration
+  class Basic
+    include Mongoid::Document
+    include Mongoid::Autofields
+  end
+
+  b = Basic.create :name => 'very basic model', :description => 'fields are automatically detected'
+  p Basic.last
+
+== Note on Patches/Pull Requests
+
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2010 Daniel Bretoi. See LICENSE for details.
